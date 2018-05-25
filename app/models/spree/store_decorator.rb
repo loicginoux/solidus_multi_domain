@@ -1,7 +1,9 @@
 Spree::Store.class_eval do
   has_and_belongs_to_many :products, join_table: 'spree_products_stores'
+  has_and_belongs_to_many :users, join_table: 'spree_users_stores'
   has_many :taxonomies
   has_many :orders
+  has_many :prices
 
   has_many :store_shipping_methods
   has_many :shipping_methods, through: :store_shipping_methods

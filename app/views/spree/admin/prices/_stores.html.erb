@@ -1,0 +1,7 @@
+<div class="store">
+  <%= f.label :store, Spree.t(:store)%><br />
+  <%= f.select :store_id,
+              @product_stores.map { |s| [s.name, s.id] },
+              {},
+              class: "custom-select fullwidth" %>
+</div>

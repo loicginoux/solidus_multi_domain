@@ -1,0 +1,8 @@
+<div class="stores">
+  <%= hidden_field_tag 'update_store_ids', true %>
+  <%= f.label :stores, Spree.t(:stores)%><br />
+  <% Spree::Store.all.each do |store| %>
+    <%= check_box_tag "user[store_ids][]", store.id, @user_stores.include?(store.id), id: "user_store_id_#{store.id}" %>
+    <%= label_tag "user_store_id_#{store.id}", store.name %>
+  <% end %>
+</div>
