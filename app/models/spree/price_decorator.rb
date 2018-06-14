@@ -1,3 +1,1 @@
-Spree::Price.class_eval do
-  belongs_to :store
-end
+Spree::Price.belongs_to :store
